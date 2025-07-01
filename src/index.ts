@@ -10,8 +10,9 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 const allowedOrigins = [
-  "http://localhost:5173", 
-  "https://gdrive-frontend-dc57.vercel.app", 
+  "https://gdrive-frontend-dc57.vercel.app",
+  "https://gdrive-frontend-dc57-n330p30k6-chhavis-projects-3aa15ac8.vercel.app",
+  "https://gdrive-frontend-dc57-git-main-chhavis-projects-3aa15ac8.vercel.app",
 ];
 
 app.use(
