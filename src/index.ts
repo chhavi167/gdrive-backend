@@ -9,8 +9,13 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+const allowedOrigins = [
+  "http://localhost:5173", // for local dev
+  "https://gdrive-frontend-dc57.vercel.app", // your deployed frontend
+];
+
 app.use(cors({
-  origin: ["http://localhost:5173", "http://localhost:5174"],
+  origin: allowedOrigins,
   credentials: true,
 }));
 
