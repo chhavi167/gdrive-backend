@@ -19,7 +19,7 @@ model File {
   owner      User     @relation("FileOwner", fields: [ownerId], references: [id])
   ownerId    String
 
-  accessList User[]   @relation("FileAccessList") // ✅ FIXED: removed `references`
+  accessList User[]   @relation("FileAccessList") 
 }
 
 model User {
@@ -28,7 +28,7 @@ model User {
   password    String
 
   files       File[]   @relation("FileOwner")
-  sharedFiles File[]   @relation("FileAccessList") // ✅ Other side of relation
+  sharedFiles File[]   @relation("FileAccessList") 
 }
 
 
